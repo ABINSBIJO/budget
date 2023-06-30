@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body background="https://static.vecteezy.com/system/resources/previews/000/570/382/non_2x/vector-abstract-financial-chart-with-uptrend-line-graph-and-numbers-in-stock-market-on-gradient-white-color-background.jpg">
+        <div class="text-center" style="display: flex;position: relative; left: 100px; top: 50px; ">
+    <form >
+        <div  class="money"      class="text-center" style="height: 350px;margin: 50px; width: 250px; position: relative; top: 50px; left: 50px; padding: 15px; border-radius: 25px;  ">
+            <h3 style="color: brown;" > Income</h3><br>
+            <input type="text" id="incomename" class="form-control" placeholder="Enter Income Name" ><br><br>
+            <input type="text" id="income" class="form-control" ><br><br>
+            <button type="reset" class="btn btn-primary" onclick="displayIncome()">Add Income</button>
+        </div>
+    </form>
+    <form >
+        <div  class="money"  class="text-center" style="height: 250px;margin: 100px; width: 250px; position: relative; top: 50px; left: 50px; padding: 15px; border-radius: 25px;  ">
+            <h3  style="color: brown;" > Savings</h3><br>
+           <p id="savings"> 0 </p><br> <br>
+            <button type="reset" onclick="buttonReset()" class="btn btn-primary">Reset</button>
+
+        </div>
+    </form>
+    <form >
+        <div  class="money"  class="text-center" style="height: 350px;margin: 50px; width: 250px; position: relative; top: 50px; left: 50px; padding: 15px; border-radius: 25px;  ">
+            <h3 style="color: brown;" > Expense </h3><br>
+            <input type="text" id="expensename" class="form-control" placeholder="Enter Expense Name" ><br><br>
+            <input type="text" id="expenses" class="form-control" ><br><br>
+            <button type="reset" onclick="expense()" class="btn btn-primary">Add Expense</button>
+
+        </div>
+    </form>
+    </div>
+    <br><br>
+    <div class="main1part3" style="display: flex;" >
+                
+        <div class="accordion" id="accordion1" style="width: 300px;position: relative; left: 200px; top: 30px;">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne">
+                        Income History
+                    </button>
+                </div>
+                <div id="collapseOne1" class="accordion-collapse collapse show" data-bs-parent="#accordion1">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="accordion2" style="width: 300px;position: relative; left: 800px; top: 30px;" >
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne">
+                       <p>Expense History</p> 
+                    </button>
+                </div>
+                <div id="collapseOne2" class="accordion-collapse collapse show" data-bs-parent="#accordion2">
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+<script src="./budget.js"></script>
+</html>
